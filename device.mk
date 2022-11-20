@@ -15,7 +15,7 @@
 #
 
 # Get non-open-source specific aspects
-$(call inherit-product, vendor/samsung/gts7fewifi/gts7fewifi-vendor.mk)
+$(call inherit-product-if-exists, vendor/samsung/gts7fewifi/gts7fewifi-vendor.mk)
 
 # Local overlays
 DEVICE_PACKAGE_OVERLAYS += \

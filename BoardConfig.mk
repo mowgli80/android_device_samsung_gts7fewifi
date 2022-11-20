@@ -25,8 +25,18 @@ TARGET_OTA_ASSERT_DEVICE := gts7fewifi
 TARGET_BOARD_NAME := SRPUF17A001
 
 # Kernel
-TARGET_KERNEL_CONFIG := gts7fewifi_defconfig
-BOARD_MKBOOTIMG_ARGS += --board $(TARGET_BOARD_NAME)
+TARGET_KERNEL_ARCH := arm64
+TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/kernel
+BOARD_BOOTIMG_HEADER_VERSION := 3
+BOARD_KERNEL_BASE := 0x00000000
+BOARD_KERNEL_CMDLINE := console=null androidboot.hardware=qcom androidboot.memcg=1 lpm_levels.sleep_disabled=1 video=vfb:640x400,bpp=32,memsize=3072000 msm_rtb.filter=0x237 service_locator.enable=1 androidboot.usbcontroller=a600000.dwc3 swiotlb=0 loop.max_part=7 cgroup.memory=nokmem,nosocket firmware_class.path=/vendor/firmware_mnt/image pcie_ports=compat loop.max_part=7 iptable_raw.raw_before_defrag=1 ip6table_raw.raw_before_defrag=1 printk.devkmsg=on
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
+ifeq ($(TARGET_PREBUILT_KERNEL),)
+  TARGET_KERNEL_CONFIG := gts7fewifi_eur_open_defconfig
+  TARGET_KERNEL_CLANG_COMPILE := true
+  TARGET_KERNEL_SOURCE := kernel/samsung/gts7fewifi
+  BOARD_KERNEL_IMAGE_NAME := Image
+endif
 
 # Properties
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
