@@ -13,23 +13,23 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# inherit from common gts4lv-common
--include device/samsung/gts4lv-common/BoardConfigCommon.mk
+# inherit from common gts7fe-common
+-include device/samsung/gts7fe-common/BoardConfigCommon.mk
 
-DEVICE_PATH := device/samsung/gts4lvwifi
+DEVICE_PATH := device/samsung/gts7fewifi
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := gts4lvwifi
+TARGET_OTA_ASSERT_DEVICE := gts7fewifi
 
 # Board
-TARGET_BOARD_NAME := SRPSA14B001
+TARGET_BOARD_NAME := SRPUF17A001
 
 # Kernel
-TARGET_KERNEL_CONFIG := gts4lvwifi_defconfig
+TARGET_KERNEL_CONFIG := gts7fewifi_defconfig
 BOARD_MKBOOTIMG_ARGS += --board $(TARGET_BOARD_NAME)
 
 # Properties
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 
 # inherit from the proprietary version
-include vendor/samsung/gts4lvwifi/BoardConfigVendor.mk
+-include vendor/samsung/gts7fewifi/BoardConfigVendor.mk

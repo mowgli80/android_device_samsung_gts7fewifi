@@ -15,7 +15,7 @@
 #
 
 # Get non-open-source specific aspects
-$(call inherit-product, vendor/samsung/gts4lvwifi/gts4lvwifi-vendor.mk)
+$(call inherit-product, vendor/samsung/gts7fewifi/gts7fewifi-vendor.mk)
 
 # Local overlays
 DEVICE_PACKAGE_OVERLAYS += \
@@ -23,7 +23,7 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 # Device init scripts
 PRODUCT_PACKAGES += \
-    init.gts4lvwifi.rc
+    init.gts7fewifi.rc
 
-# Inherit from gts4lv-common
-$(call inherit-product, device/samsung/gts4lv-common/gts4lv.mk)
+# Inherit from gts7fe-common
+$(call inherit-product, device/samsung/gts7fe-common/gts7fe.mk)

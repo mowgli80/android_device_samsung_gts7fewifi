@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2019 The LineageOS Project
+# Copyright (C) 2019 The arrowOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,9 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_gts4lvwifi.mk
+    $(LOCAL_DIR)/arrow_gts7fewifi.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_gts4lvwifi-user \
-    lineage_gts4lvwifi-userdebug \
-    lineage_gts4lvwifi-eng
+    arrow_gts7fewifi-user \
+    arrow_gts7fewifi-userdebug \
+    arrow_gts7fewifi-eng

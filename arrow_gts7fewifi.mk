@@ -18,26 +18,26 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 
-# Inherit from gts4lvwifi device
-$(call inherit-product, device/samsung/gts4lvwifi/device.mk)
+# Inherit from gts7fewifi device
+$(call inherit-product, device/samsung/gts7fewifi/device.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_tablet_wifionly.mk)
+$(call inherit-product, vendor/arrow/config/common.mk)
 
 # Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := gts4lvwifi
-PRODUCT_NAME := lineage_gts4lvwifi
+PRODUCT_DEVICE := gts7fewifi
+PRODUCT_NAME := lineage_gts7fewifi
 PRODUCT_BRAND := samsung
-PRODUCT_MODEL := SM-T720
+PRODUCT_MODEL := SM-T733
 PRODUCT_MANUFACTURER := samsung
 
-PRODUCT_SYSTEM_NAME := gts4lvwifixx
+PRODUCT_SYSTEM_NAME := gts7fewifixx
 
 PRODUCT_GMS_CLIENTID_BASE := android-samsung
 
 # Use the latest approved GMS identifiers
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    TARGET_PRODUCT=gts4lvwifixx \
-    PRIVATE_BUILD_DESC="gts4lvwifixx-user 11 RP1A.200720.012 T720XXU2DVG3 release-keys"
+    TARGET_PRODUCT=gts7fewifixx \
+    PRIVATE_BUILD_DESC="gts7fewifixx-user 12 SP2A.220305.013 T733XXU1BVH4 release-keys"
 
-BUILD_FINGERPRINT := "samsung/gts4lvwifixx/gts4lvwifi:11/RP1A.200720.012/T720XXU2DVG3:user/release-keys"
+BUILD_FINGERPRINT := "samsung/gts7fewifixx/gts7fewifi:12/SP2A.220305.013/T733XXU1BVH4:user/release-keys"
